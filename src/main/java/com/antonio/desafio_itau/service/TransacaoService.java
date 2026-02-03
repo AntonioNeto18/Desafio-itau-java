@@ -33,4 +33,9 @@ public class TransacaoService {
         // Cria a transacao
         transacoes.add(request);
     }
+
+    // DELETE /transacao
+    public void limparTransacoes(){
+        transacoes.clear();
+    }
 }
