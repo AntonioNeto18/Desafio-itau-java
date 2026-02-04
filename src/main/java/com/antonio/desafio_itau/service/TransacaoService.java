@@ -38,4 +38,11 @@ public class TransacaoService {
     public void limparTransacoes(){
         transacoes.clear();
     }
+
+    // Lista as transacoes de um determinado periodo de tempo
+    public List<TransacaoRequest> listarUltimasTransacoes(Integer segundos){
+        return transacoes.stream()
+                .filter(t -> t.dataHora().isAfter(OffsetDateTime.now().minusSeconds(segundos)))
+                .toList();
+    }
 }
