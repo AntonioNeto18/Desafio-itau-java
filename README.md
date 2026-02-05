@@ -52,7 +52,7 @@ Endpoint responsável por registrar uma nova transação.
 
 ### GET /estatistica
 
-Retorna as estatísticas das transações realizadas nos últimos 60 segundos.
+Retorna as estatísticas das transações realizadas nos últimos segundos passados atráves de um parâmetro chamado `ultimosSegundos`.
 
 #### Exemplo de resposta:
 ```json
@@ -77,3 +77,31 @@ Remove todas as transações armazenadas em memória.
 - `200 OK` — transações removidas com sucesso
 
 ---
+
+## 🛠️ Tecnologias Utilizadas
+
+- Java 21
+- Spring Boot
+- Spring Web
+- Swaggerpara documentação
+- Maven
+- Docker
+
+---
+
+## ▶️ Como executar o projeto
+1. Clone o repositório
+```sh
+git clone https://github.com/AntonioNeto18/Desafio-itau-java.git
+cd Desafio-itau-java
+```
+2. Execute usando docker
+```sh
+docker-compose up -d  # Inicia a aplicação
+docker-compose down   # Para a aplicação
+```
+
+---
+
+#### A api ficará disponível em `http://localhost:8080`
+#### Acesse a docs do swagger acessando `http://localhost:8080/docs`
